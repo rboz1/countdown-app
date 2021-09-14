@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(images/pattern-hills.svg) no-repeat 85% 100%, url(images/bg-stars.svg);
+  background-color: #343650;
+}
+
+body main {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4], 50px;
+      grid-template-rows: repeat(4, 1fr), 50px;
+      grid-template-areas: "heading" "time" " . " "icons";
+}
+
+body main h2 {
+  grid-area: "heading";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: "Red Hat Text", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  color: white;
+}
+
+body main h3 {
+  grid-area: "time";
+}
+
+body main h3 .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-transform: uppercase;
+  font-family: "Red Hat Text", sans-serif;
+  color: white;
+  list-style: none;
+}
+
+body main .icons {
+  grid-area: "icons";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .icons img {
+  padding: 5%;
+}
+
+body .attribution {
+  grid-area: "attribute";
+}
+/*# sourceMappingURL=styles.css.map */
