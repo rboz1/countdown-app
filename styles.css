@@ -4,7 +4,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: url(images/pattern-hills.svg) no-repeat 85% 100%, url(images/bg-stars.svg);
-  background-color: #343650;
+  background-color: #1e1f29;
 }
 
 body main {
@@ -45,24 +45,85 @@ body main h3 {
   grid-area: "time";
 }
 
+body main h3 .countdown {
+  font-family: "Red Hat Text", sans-serif;
+  list-style: none;
+  padding: 0;
+}
+
 body main h3 .time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "num1 num2 num3 num4" "d h m s";
+  row-gap: 2%;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  justify-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
+  margin-left: 7%;
+  margin-right: 7%;
   text-transform: uppercase;
   font-family: "Red Hat Text", sans-serif;
-  color: white;
+  font-size: 0.5rem;
+  color: #8486a9;
   list-style: none;
+  padding: 0;
+}
+
+body main h3 .time .meh {
+  padding-top: 20%;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+body main h3 .time .number {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  padding: 10%;
+  color: #fb6087;
+  text-align: center;
+  border: 2px solid #343650;
+  border-radius: 10%;
+  background-color: #343650;
+}
+
+body main h3 .time .num1 {
+  grid-area: "num1";
+}
+
+body main h3 .time .num2 {
+  grid-area: "num2";
+}
+
+body main h3 .time .num3 {
+  grid-area: "num3";
+}
+
+body main h3 .time .num4 {
+  grid-area: "num4";
+}
+
+body main h3 .time .d {
+  grid-area: "d";
+}
+
+body main h3 .time .h {
+  grid-area: "h";
+}
+
+body main h3 .time .m {
+  grid-area: "m";
+}
+
+body main h3 .time .s {
+  grid-area: "s";
 }
 
 body main .icons {
@@ -88,5 +149,11 @@ body main .icons img {
 
 body .attribution {
   grid-area: "attribute";
+}
+
+@media screen and (min-device-width: 1200px) {
+  h2 {
+    padding-top: 5%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

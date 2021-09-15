@@ -1,7 +1,10 @@
 //Font Styling
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
-$bg-color: hsl(236, 21%, 26%);
+$bg-color: hsl(235, 16%, 14%);
 $white: hsl(0, 0%, 100%);
+$num-color: hsl(345, 95%, 68%);
+$card-color: hsl(236, 21%, 26%);
+$time-color: hsl(237, 18%, 59%);
 $font: 'Red Hat Text', sans-serif;
 $font-size: 14px;
 
@@ -44,15 +47,81 @@ body{
         h3{
             grid-area: "time";
 
+            .countdown{
+                font-family: $font;
+                list-style: none;
+                padding: 0;
+            }
+
             .time{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-end;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas: 
+                    "num1 num2 num3 num4"
+                    "d h m s"
+                ;
+
+                row-gap: 2%;
+                column-gap: 5%;
+
+                justify-items: stretch;
+                align-items: center;
+
+                margin-top: 10%;
+                margin-left: 7%;
+                margin-right: 7%;
+                
                 text-transform: uppercase;
                 font-family: $font;
-                color: $white;
+                font-size: 0.5rem;
+                color: $time-color;
                 list-style: none;
+                padding: 0;
+
+                .meh{
+                    padding-top: 20%;
+                    letter-spacing: 4px;
+                    text-align: center;
+                }
+
+                .number{
+                    font-size: 2rem;
+                    letter-spacing: 4px;
+                    padding: 10%;
+                    color: $num-color;
+                    text-align: center;
+
+                    border: 2px solid $card-color;
+                    border-radius: 10%;
+                    background-color: $card-color;
+                }
+
+                .num1{
+                    grid-area: "num1";
+                }
+                .num2{
+                    grid-area: "num2";
+                }
+                .num3{
+                    grid-area: "num3";
+                }
+                .num4{
+                    grid-area: "num4";
+                }
+
+                .d{
+                    grid-area: "d";
+                }
+                .h{
+                    grid-area: "h";
+                }
+                .m{
+                    grid-area: "m";
+                }
+                .s{
+                    grid-area: "s";
+                }
             }
         
         }
@@ -87,4 +156,12 @@ body{
 
 //Laptop and beyond
 @media screen 
-  and (min-device-width: 1200px) {}
+  and (min-device-width: 1200px) {
+      h2{
+          padding-top: 5%;
+      }
+
+      h3{
+          
+      }
+  }
