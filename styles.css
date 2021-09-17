@@ -92,6 +92,8 @@ body main h3 .time .number {
   border: 2px solid #343650;
   border-radius: 10%;
   background-color: #343650;
+  -webkit-box-shadow: 0px 10px 0px #191a24;
+          box-shadow: 0px 10px 0px #191a24;
 }
 
 body main h3 .time .num1 {
@@ -143,8 +145,16 @@ body main .icons {
           align-items: center;
 }
 
-body main .icons img {
+body main .icons a {
   padding: 5%;
+}
+
+body main .icons a svg {
+  fill: #8385A9;
+}
+
+body main .icons a svg:hover {
+  fill: #fb6087;
 }
 
 body .attribution {
@@ -152,8 +162,28 @@ body .attribution {
 }
 
 @media screen and (min-device-width: 1200px) {
-  h2 {
+  body main h2 {
     padding-top: 5%;
+  }
+  body main h3 .time {
+    margin: 5%;
+    justify-items: center;
+    -webkit-column-gap: 2%;
+            column-gap: 2%;
+  }
+  body main h3 .time .number {
+    width: 40%;
+    font-size: 4rem;
+  }
+  body main h3 .time .meh {
+    font-size: 1rem;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    padding: 5%;
+  }
+  body main .icons a {
+    padding: 2%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

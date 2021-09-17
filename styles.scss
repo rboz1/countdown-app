@@ -5,6 +5,7 @@ $white: hsl(0, 0%, 100%);
 $num-color: hsl(345, 95%, 68%);
 $card-color: hsl(236, 21%, 26%);
 $time-color: hsl(237, 18%, 59%);
+$shadow: hsl(234, 17%, 12%);
 $font: 'Red Hat Text', sans-serif;
 $font-size: 14px;
 
@@ -95,6 +96,7 @@ body{
                     border: 2px solid $card-color;
                     border-radius: 10%;
                     background-color: $card-color;
+                    box-shadow: 0px 10px 0px $shadow;
                 }
 
                 .num1{
@@ -133,9 +135,17 @@ body{
             justify-content: center;
             align-items: center;
 
-            img{
+            a{
                 padding: 5%;
+
+                svg{
+                    fill: #8385A9;
+                }
+                svg:hover{
+                    fill:$num-color;
+                }
             }
+
         
         }
     }
@@ -157,11 +167,36 @@ body{
 //Laptop and beyond
 @media screen 
   and (min-device-width: 1200px) {
-      h2{
-          padding-top: 5%;
-      }
 
-      h3{
-          
-      }
-  }
+body{
+        main{
+            h2{
+                padding-top: 5%;
+            }
+    
+            h3{
+                .time{
+                    margin: 5%;
+                    justify-items: center;
+                    column-gap: 2%;
+                    .number{
+                        width: 40%;
+                        font-size: 4rem;
+                    }
+                    .meh{
+                        font-size: 1rem;
+                        align-self: start;
+                        padding: 5%;
+                    }
+                }
+    
+            }
+
+            .icons{
+                a{
+                    padding: 2%;
+                }
+            }
+        }
+    }
+}
