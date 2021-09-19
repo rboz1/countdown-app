@@ -155,14 +155,38 @@ body{
     }
 }
 
-
-
-
 //Media Queries
 //Tablets
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1200px) {}
+  and (max-device-width: 1200px) {
+    body{
+        main{
+            h3{
+                .time{
+                    justify-items: center;
+                    row-gap: 10%;
+                    .number{
+                        width: 70%;
+                        font-size: 4rem;
+                    }
+                    .meh{
+                        font-size: 1rem;
+                        align-self: start;
+                        padding: 5%;
+                    }
+                }
+
+            }
+
+            .icons{
+                align-items: flex-end;
+            }
+    
+        }
+
+    }
+  }
 
 //Laptop and beyond
 @media screen 

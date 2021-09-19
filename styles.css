@@ -161,6 +161,29 @@ body .attribution {
   grid-area: "attribute";
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+  body main h3 .time {
+    justify-items: center;
+    row-gap: 10%;
+  }
+  body main h3 .time .number {
+    width: 70%;
+    font-size: 4rem;
+  }
+  body main h3 .time .meh {
+    font-size: 1rem;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    padding: 5%;
+  }
+  body main .icons {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
 @media screen and (min-device-width: 1200px) {
   body main h2 {
     padding-top: 5%;
