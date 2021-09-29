@@ -1,60 +1,32 @@
-//Describe function here
+//function that calculates the difference in time between 2 dates and outputs the difference as a countdown
 
-//Saves interval ID to variable and calls timer function every 1 second
-let intervalID = setInterval(() => {countdownSeconds(getTime)}, 1000);
+//date to countdown to
+const futureDate = new Date("December 3 2021 4:43:00").getTime();
 
-// const timer = () => {
-//     let elemArr = document.getElementsByClassName("number"); //array of elements with className = "number"
-//     let newElemArr = Array.from(elemArr); //creates array from HTML collection
+const timer = (countdown) => {
+   //get current date
+   let now = new Date().getTime();
 
-//     console.log(newElemArr);
+   //find amount of milliseconds to countdown
+   let diff = countdown - now;
 
-//     newElemArr.forEach(element => {
-//         if(parseInt(element.innerHTML) > 0){
-//            return element.innerHTML -= 1;
-//         } else{
-//            return clearInterval(intervalID);
-//         }
-//     });
-// }
+   //calculate amount of time remaining for each time value
+   let day = Math.floor(diff / (1000 * 60 * 60 * 24));
+   let hr = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   let min = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+   let sec = Math.floor((diff % (1000 * 60)) / 1000);
 
+   //output result onto screen
+   document.getElementsByClassName("number")[0].innerHTML = day;
+   document.getElementsByClassName("number")[1].innerHTML = hr;
+   document.getElementsByClassName("number")[2].innerHTML = min;
+   document.getElementsByClassName("number")[3].innerHTML = sec;
 
-//make it so 1 day is 24 hrs and 1 hr is 60 mins etc.
-//also make it so when one gets to 0 not all of them stop
-//use for..of loop instead?
-
-
-//Seconds
-//if sec > 0 && min > 0 => innerhtml - 1
-//if sec === 0 && min >
-
-// newElemArr.forEach(element => {
-//     if(parseInt(element[3].innerHTML) > 0 && parseInt(element[2].innerHTML) > 0){
-//        return element.innerHTML -= 1;
-//     } else{
-//        return clearInterval(intervalID);
-//     }
-// });
-
-
-
-//get numbers
-//start counting down seconds
-//when seconds gets to zero, reduce mins by 1, if mins >0, countdown secs, else if mins = 0
-
-
-const getTime = () => {
-   let elemArr = document.getElementsByClassName("number"); //array of elements with className = "number"
-   let newElemArr = Array.from(elemArr).map(elem => {return parseInt(elem.innerHTML);}); //creates array from HTML collection
-  
-   console.log(newElemArr);
-   return newElemArr;
+   //stop the setInterval() method when the difference between now and the countdown date is less than zero
+   if(diff < 0){
+      clearInterval(intervalID);
+   };
 }
- 
-const countdownSeconds = (Arr) => {
-   if(Arr[3] > 0 && Arr[2] > 0){
-      return Arr[3] -= 1;
-   } else{
-      return clearInterval(intervalID);
-   }
-}
+
+//call the timer function every 1 second using the futureDate as an argument, save the interval ID in order to clear the timer
+let intervalID = setInterval(() => {timer(futureDate)}, 1000);
