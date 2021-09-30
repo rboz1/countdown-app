@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-[Live Site URL](https://rboz1.github.io/timer-app/)
+[Live Site URL](https://rboz1.github.io/countdown-app/)
 
 ## My process
 
