@@ -41,17 +41,14 @@ body main h2 {
   color: white;
 }
 
-body main h3 {
-  grid-area: "time";
-}
-
-body main h3 .countdown {
+body main .countdown {
   font-family: "Red Hat Text", sans-serif;
   list-style: none;
   padding: 0;
 }
 
-body main h3 .time {
+body main .time {
+  grid-area: "time";
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -77,13 +74,13 @@ body main h3 .time {
   padding: 0;
 }
 
-body main h3 .time .date {
+body main .time .date {
   padding-top: 20%;
   letter-spacing: 4px;
   text-align: center;
 }
 
-body main h3 .time .number {
+body main .time .number {
   font-size: 2rem;
   letter-spacing: 4px;
   padding: 10%;
@@ -96,39 +93,39 @@ body main h3 .time .number {
           box-shadow: 0px 10px 0px #191a24;
 }
 
-body main h3 .time .num1 {
+body main .time .num1 {
   grid-area: "num1";
 }
 
-body main h3 .time .num2 {
+body main .time .num2 {
   grid-area: "num2";
 }
 
-body main h3 .time .num3 {
+body main .time .num3 {
   grid-area: "num3";
 }
 
-body main h3 .time .num4 {
+body main .time .num4 {
   grid-area: "num4";
 }
 
-body main h3 .time .d {
+body main .time .d {
   grid-area: "d";
 }
 
-body main h3 .time .h {
+body main .time .h {
   grid-area: "h";
 }
 
-body main h3 .time .m {
+body main .time .m {
   grid-area: "m";
 }
 
-body main h3 .time .s {
+body main .time .s {
   grid-area: "s";
 }
 
-body main .icons {
+body .icons {
   grid-area: "icons";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,32 +142,32 @@ body main .icons {
           align-items: center;
 }
 
-body main .icons a {
+body .icons a {
   padding: 5%;
 }
 
-body main .icons a svg {
+body .icons a svg {
   fill: #8385A9;
 }
 
-body main .icons a svg:hover {
+body .icons a svg:hover {
   fill: #fb6087;
 }
 
-body .attribution {
+.attribution {
   grid-area: "attribute";
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
-  body main h3 .time {
+  body main .time {
     justify-items: center;
     row-gap: 10%;
   }
-  body main h3 .time .number {
+  body main .time .number {
     width: 70%;
     font-size: 4rem;
   }
-  body main h3 .time .date {
+  body main .time .date {
     font-size: 1rem;
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
@@ -188,17 +185,17 @@ body .attribution {
   body main h2 {
     padding-top: 5%;
   }
-  body main h3 .time {
+  body main .time {
     margin: 5%;
     justify-items: center;
     -webkit-column-gap: 2%;
             column-gap: 2%;
   }
-  body main h3 .time .number {
+  body main .time .number {
     width: 40%;
     font-size: 4rem;
   }
-  body main h3 .time .date {
+  body main .time .date {
     font-size: 1rem;
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;

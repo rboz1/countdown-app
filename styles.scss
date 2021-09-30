@@ -44,87 +44,76 @@ body{
             color: $white;
         
         }
-        
-        h3{
+    
+        .countdown{
+            font-family: $font;
+            list-style: none;
+            padding: 0;
+        }
+        .time{
             grid-area: "time";
-
-            .countdown{
-                font-family: $font;
-                list-style: none;
-                padding: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+                "num1 num2 num3 num4"
+                "d h m s"
+            ;
+            row-gap: 2%;
+            column-gap: 5%;
+            justify-items: stretch;
+            align-items: center;
+            margin-top: 10%;
+            margin-left: 7%;
+            margin-right: 7%;
+            
+            text-transform: uppercase;
+            font-family: $font;
+            font-size: 0.5rem;
+            color: $time-color;
+            list-style: none;
+            padding: 0;
+            .date{
+                padding-top: 20%;
+                letter-spacing: 4px;
+                text-align: center;
             }
-
-            .time{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-template-areas: 
-                    "num1 num2 num3 num4"
-                    "d h m s"
-                ;
-
-                row-gap: 2%;
-                column-gap: 5%;
-
-                justify-items: stretch;
-                align-items: center;
-
-                margin-top: 10%;
-                margin-left: 7%;
-                margin-right: 7%;
-                
-                text-transform: uppercase;
-                font-family: $font;
-                font-size: 0.5rem;
-                color: $time-color;
-                list-style: none;
-                padding: 0;
-
-                .date{
-                    padding-top: 20%;
-                    letter-spacing: 4px;
-                    text-align: center;
-                }
-
-                .number{
-                    font-size: 2rem;
-                    letter-spacing: 4px;
-                    padding: 10%;
-                    color: $num-color;
-                    text-align: center;
-
-                    border: 2px solid $card-color;
-                    border-radius: 10%;
-                    background-color: $card-color;
-                    box-shadow: 0px 10px 0px $shadow;
-                }
-
-                .num1{
-                    grid-area: "num1";
-                }
-                .num2{
-                    grid-area: "num2";
-                }
-                .num3{
-                    grid-area: "num3";
-                }
-                .num4{
-                    grid-area: "num4";
-                }
-
-                .d{
-                    grid-area: "d";
-                }
-                .h{
-                    grid-area: "h";
-                }
-                .m{
-                    grid-area: "m";
-                }
-                .s{
-                    grid-area: "s";
-                }
+            .number{
+                font-size: 2rem;
+                letter-spacing: 4px;
+                padding: 10%;
+                color: $num-color;
+                text-align: center;
+                border: 2px solid $card-color;
+                border-radius: 10%;
+                background-color: $card-color;
+                box-shadow: 0px 10px 0px $shadow;
             }
+            .num1{
+                grid-area: "num1";
+            }
+            .num2{
+                grid-area: "num2";
+            }
+            .num3{
+                grid-area: "num3";
+            }
+            .num4{
+                grid-area: "num4";
+            }
+            .d{
+                grid-area: "d";
+            }
+            .h{
+                grid-area: "h";
+            }
+            .m{
+                grid-area: "m";
+            }
+            .s{
+                grid-area: "s";
+            }
+        }
         
         }
         
@@ -153,7 +142,6 @@ body{
     .attribution{
         grid-area: "attribute";
     }
-}
 
 //Media Queries
 //Tablets
@@ -162,22 +150,20 @@ body{
   and (max-device-width: 1200px) {
     body{
         main{
-            h3{
-                .time{
-                    justify-items: center;
-                    row-gap: 10%;
-                    .number{
-                        width: 70%;
-                        font-size: 4rem;
-                    }
-                    .date{
-                        font-size: 1rem;
-                        align-self: start;
-                        padding: 5%;
-                    }
+            .time{
+                justify-items: center;
+                row-gap: 10%;
+                .number{
+                    width: 70%;
+                    font-size: 4rem;
                 }
-
+                .date{
+                    font-size: 1rem;
+                    align-self: start;
+                    padding: 5%;
+                }
             }
+
 
             .icons{
                 align-items: flex-end;
@@ -198,23 +184,21 @@ body{
                 padding-top: 5%;
             }
     
-            h3{
-                .time{
-                    margin: 5%;
-                    justify-items: center;
-                    column-gap: 2%;
-                    .number{
-                        width: 40%;
-                        font-size: 4rem;
-                    }
-                    .date{
-                        font-size: 1rem;
-                        align-self: start;
-                        padding: 5%;
-                    }
+            .time{
+                margin: 5%;
+                justify-items: center;
+                column-gap: 2%;
+                .number{
+                    width: 40%;
+                    font-size: 4rem;
                 }
-    
+                .date{
+                    font-size: 1rem;
+                    align-self: start;
+                    padding: 5%;
+                }
             }
+    
 
             .icons{
                 a{
