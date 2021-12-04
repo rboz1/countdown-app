@@ -1,7 +1,7 @@
 //function that calculates the difference in time between 2 dates and outputs the difference as a countdown
 
 //date to countdown to
-const futureDate = new Date("December 3 2021 4:43:00").getTime();
+const futureDate = new Date("December 3 2022 4:43:00").getTime();
 
 const timer = (countdown) => {
    //get current date
