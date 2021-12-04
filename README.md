@@ -4,6 +4,7 @@
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -24,7 +25,10 @@ Users should be able to:
 
 ### Links
 
-[Live Site URL](https://rboz1.github.io/countdown-app/)
+[Active Site Link](https://rboz1.github.io/countdown-app/)
+
+### Screenshot
+![screenshot](./screenshot.jpg)
 
 ## My process
 
