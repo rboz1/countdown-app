@@ -57,7 +57,7 @@ I really want to practice more **vanilla JS** especially built-in objects. The l
 
 ## Author
 
-- Website - [Rachel Bozadjian](https://www.your-site.com)
+- Website - [Rachel Bozadjian](https://github.com/rboz1)
 
 ## Acknowledgments
 
