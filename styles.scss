@@ -179,6 +179,8 @@ body{
   and (min-device-width: 1200px) {
 
 body{
+    background: url(images/pattern-hills.svg) repeat-x 85% 100%, url(images/bg-stars.svg);
+    background-color: $bg-color;
         main{
             h2{
                 padding-top: 5%;
